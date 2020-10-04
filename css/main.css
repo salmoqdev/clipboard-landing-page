@@ -1,0 +1,254 @@
+/*
+*Mobile-first approach
+*/
+
+/*General classes*/
+:root {
+    --clr-dark-grey: hsl(210, 10%, 33%);
+    --clr-light-grey: hsl(201, 11%, 66%);
+    --clr-cyan: hsl(171, 66%, 44%);
+    --clr-blue: hsl(233, 100%, 69%);
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html {
+    background: url(../images/bg-header-mobile.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+body {
+    margin: 0;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.3;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6, a {
+    margin: 0;
+    color: var(--clr-dark-grey);
+}
+
+p {
+    margin: .7em 0 2.5em;
+    color: var(--clr-light-grey);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: var(--clr-cyan);
+}
+
+/*Reusable classes*/
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.btn1, 
+.btn2 {
+    padding: 1.2em 6em;
+    margin: .7em 0;
+    color: #fff;
+    font-weight: 600;
+    background-color: var(--clr-cyan);
+    border-radius: 2em;
+    transition: opacity 250ms linear;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn2 {
+    background-color: var(--clr-blue);
+}
+
+.btn1:hover,
+.btn2:hover {
+    opacity: .8;
+}
+
+.button-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Specific classes*/
+header {
+    padding: 7em 0 0;
+}
+
+.header-logo {
+    margin-bottom: 3em;
+}
+
+.snippets-features {
+    margin: 2.7em 0 0;
+}
+
+.features {
+    margin: 8em 0;
+}
+
+.companies-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+    margin-top: 8em;
+}
+
+footer {
+    background: #eee;
+    padding: 3em 0;
+}
+
+.footer-flex {
+    margin-bottom: 2em;
+}
+
+.footer-logo {
+    width: 20%;
+}
+
+.col2, .col3, .col4 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4em;
+    margin: 1.4em 0;/*margin between each div and the the next div*/
+}
+.col5 {
+    margin: 3em 0;
+}
+
+.social-logo {
+    width: 10%;
+    margin: 0 1em;
+    transition: transform 250ms ease-in-out;
+}
+
+.social-logo:hover,
+.social-logo:focus {
+    background-color: var(--clr-cyan);
+    transform: scale(1.1);
+}
+
+.attribution { 
+    font-size: .688rem;
+    text-align: center;
+    margin-bottom: -6em;
+}
+
+.attribution a { 
+    color: var(--clr-blue);
+}
+
+/*media query for screens larger than 768px (48 * 16)*/
+@media (min-width: 48em) {
+    html {
+        background: url(../images/bg-header-desktop.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .container {
+        width: 55%;
+        margin: 0 auto;
+    }
+
+    .button-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .btn1, .btn2 {
+        padding: 1.2em 3em;
+        margin: 0 .4em;
+    }
+
+    .snippets-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 150%;
+        margin-left: -20em;
+    }
+
+    .snippets-features {
+        text-align: left;
+        margin-left: 3em;
+    }
+
+    .workflow-container {
+        width: 150%;
+        margin-left: -10em;
+    }
+
+    .workflow-flex {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .workflow-feature {
+        margin: 0 1em;
+    }
+
+    .companies-flex {
+        display: flex;
+        flex-direction: row;
+        margin-top: 5em;
+    }
+
+    footer .container {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .footer-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+    .footer-logo {
+        width: 40%;
+    }
+
+    .col2, .col3, .col4 {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        margin:  1em;
+    }
+
+    .col4 {
+        align-self: flex-start;
+    }
+
+    .col5 {
+        margin: 0;
+        text-align: right;
+    }
+
+    .social-logo {
+        width: 10%;
+        margin: 0 1em;
+    }
+}
